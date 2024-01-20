@@ -40,16 +40,16 @@ public class L_Search {
 
    public static int bwr(int arr[], int l, int r, int x)
     {
-        if (r >= l && l <= arr.length - 1) {
+        if (r >= l && l <= arr.length - 1) 
+        {
             int mid = l + (r - l) / 2;
-
             if (arr[mid] == x)
                 return mid;
-
+            
             if (arr[mid] > x)
-                return bwr(arr, l, mid - 1, x);
-
-            return bwr(arr, mid + 1, r, x);
+               return bwr(arr, l, mid - 1, x);
+            else
+                 return bwr(arr, mid + 1, r, x);
         }
         return -1;
     }
